@@ -69,5 +69,6 @@ def consulta():
   #  html = """<p>>%s</p>""" % onto.Mat_Vis_Glo_M.instances()
 
 
-import werkzeug.serving
-werkzeug.serving.run_simple("localhost", 5000, app)
+#import werkzeug.serving
+#werkzeug.serving.run_simple("localhost", 5000, app)
+app.run('0.0.0.0', 5000, debug=True)
