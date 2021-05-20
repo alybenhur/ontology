@@ -45,7 +45,7 @@ def consulta():
   consul = request.args.get("c"," ")
   
   html = ""
-  sync_reasoner_hermit()
+  #sync_reasoner_hermit()
   if consul == "1" :
         html = """<p>>%s</p>""" % onto.Mat_Vis_Glo_M.instances()
   else:
