@@ -72,4 +72,4 @@ def consulta():
 #import werkzeug.serving
 #werkzeug.serving.run_simple("localhost", 5000, app)
 port=os.environ["PORT"]
-app.run('0.0.0.0', 5000, debug=True)
+app.run('0.0.0.0',port, debug=True)
