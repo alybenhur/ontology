@@ -20,8 +20,8 @@ def ontology_page():
     html += """<h2>Consultas disponibles</h2>""" 
     html += """<h2>'%s' ontology</h2>""" % onto.base_iri
     html += """<h3>Root classes</h3>"""
-    #for Class in Thing.subclasses():
-        #html += """<p>>%s</p>""" % Class.name
+    for Class in Thing.subclasses():
+        html += """<p>>%s</p>""" % Class.name
     
     
     html += """<div>
