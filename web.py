@@ -63,7 +63,7 @@ def consulta():
          
          #for x in range(0,len(d)):
          #  html += """<br>>%s</br>""" % str(d[x])
-         html += json.JSONEncoder.default(self, d)
+         html += json.JSONEncoder.default(d)
     
   return html
            
