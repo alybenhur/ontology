@@ -7,6 +7,7 @@ Created on Sat Apr 10 13:04:27 2021
 """
 from owlready2 import *
 from rdflib import *
+import json
 
 onto = get_ontology("estilosR.owl").load()
 graph = default_world.as_rdflib_graph()
