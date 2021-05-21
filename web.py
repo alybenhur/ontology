@@ -64,8 +64,8 @@ def consulta():
          for x in range(0,len(d)):
             ruta[x]= str(d[x])
          #  html += """<br>>%s</br>""" % str(d[x])
-         
-         html += json.JSONEncoder.default(d)
+         archivo = json.dump(ruta)
+         html = archivo
     
   return html
            
