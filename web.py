@@ -59,8 +59,10 @@ def consulta():
                                   ?a estilo:se_relaciona_con estilo:verbal_secuencial_fuerte.
                                   ?b estilo:tiene estilo:verbal_secuencial_fuerte.
                                               }""")))
-         for x in range(0,len(d)):
-           html += """<br>>%s</br>""" % str(d[x])
+         
+         #for x in range(0,len(d)):
+         #  html += """<br>>%s</br>""" % str(d[x])
+         html += json.JSONEncoder.default(self, d)
     
   return html
            
