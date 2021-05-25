@@ -2,3 +2,4 @@ Flask==1.1.2
 Owlready2==0.29
 rdflib==4.2.1
 requests==2.19.1
+Flask-Cors==3.0.10
