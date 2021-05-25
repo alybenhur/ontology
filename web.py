@@ -8,6 +8,7 @@ Created on Sat Apr 10 13:04:27 2021
 from owlready2 import *
 from rdflib import *
 import json
+from flask_cors import CORS
 
 onto = get_ontology("estilosR.owl").load()
 graph = default_world.as_rdflib_graph()
@@ -15,6 +16,7 @@ graph = default_world.as_rdflib_graph()
 from flask import Flask, request
 
 app = Flask(__name__)
+CORS(app)
 @app.route('/')
 def ontology_page():
     html  = """<html><body>"""
