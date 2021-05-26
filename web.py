@@ -63,7 +63,7 @@ def consulta():
                                        }""")))
          ruta = {}
          for x in range(0,len(d)):
-            ruta[x]= str(d[x])
+            ruta[x]= {x : str(d[x])}
          #  html += """<br>>%s</br>""" % str(d[x])
          archivo = json.dumps(ruta)
          html = archivo
