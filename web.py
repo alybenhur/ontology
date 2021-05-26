@@ -61,7 +61,8 @@ def consulta():
                               SELECT distinct ?a WHERE {
                                   ?a estilo:se_relaciona_con estilo:verbal_secuencial_fuerte.
                                        }""")))
-         ruta = {}
+         ruta = []
+         
          for x in range(0,len(d)):
             ruta[x]= {x : str(d[x])}
          #  html += """<br>>%s</br>""" % str(d[x])
