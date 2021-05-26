@@ -58,10 +58,9 @@ def consulta():
          d = (list(graph.query_owlready("""
                               PREFIX rdf-syntax: <http://www.w3.org/1999/02/22-rdf-syntax.ns#>
                               PREFIX estilo: <http://www.semanticweb.org/root/ontologies/estilo#>
-                              SELECT distinct ?a ?b ?c WHERE {
+                              SELECT distinct ?a ?b WHERE {
                                   ?a estilo:se_relaciona_con estilo:verbal_secuencial_fuerte.
-                                  ?b estilo:tiene estilo:verbal_secuencial_fuerte.
-                                              }""")))
+                                       }""")))
          ruta = {}
          for x in range(0,len(d)):
             ruta[x]= str(d[x])
