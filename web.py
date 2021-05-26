@@ -64,7 +64,7 @@ def consulta():
          ruta = []
          
          for x in range(0,len(d)):
-            st = d[x]
+            st = str(d[x])
             st = st[2:-2]
             ruta.append(st)
          # str(d[x]) html += """<br>>%s</br>""" % str(d[x])
