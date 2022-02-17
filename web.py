@@ -51,7 +51,8 @@ def consulta():
   html = ""
   #sync_reasoner_hermit()
   if consul == "1" :
-        html = """<p>>%s</p>""" % onto.Mat_Vis_Glo_M.instances()
+       # html = """<p>>%s</p>""" % onto.Mat_Vis_Glo_M.instances()
+        html = """<p>>%s</p>""" % onto.Video.instances()
   else:
      if consul == "2" :
         html = """<p>>%s</p>""" % onto.Persona_Estilo_Verbal_Global_Fuerte.instances()
