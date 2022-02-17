@@ -36,7 +36,7 @@ def ontology_page():
   <input type="radio" id="2" name="c" value="2">
   <label for="2">Consulta 2</label><br>
   <input type="radio" id="3" name="c" value="3">
-  <label for="3">Consulta 3 Saludos</label>
+  <label for="3">Consulta 3 Saludos hola</label>
   </p>
 <p><input type="submit"></p>
     </form>
