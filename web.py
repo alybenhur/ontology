@@ -65,7 +65,7 @@ def consulta():
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX  :<http://www.semanticweb.org/miguelangel/ontologies/2022/estilos#>
-        SELECT   ?x ?y ?w WHERE { 
+        SELECT   ?x WHERE { 
           ?x :se_identifica_con_e_a  :visual_secuencial_apropiado.
           ?x :formato  ?y.  
           ?x :nivel ?w.  
