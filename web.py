@@ -70,6 +70,7 @@ def consulta():
           ?x :formato  ?y.  
           ?x :nivel ?w.  
         }""")
+        html = """<p>>Hola</p>"""
         #unique_category = []
         #for row in qres:
         #   category = ("%s" % row).split('/')[-4]
@@ -83,9 +84,9 @@ def consulta():
             #st = st[1:-1]
          #   ruta.append(st)
        #archivo = json.dumps(d)
-       html = "hola"
+       #html = "hola"
             
-       # html = """<p>>%s</p>""" % onto.Video.instances()
+       
   else:
      if consul == "2" :
         html = """<p>>%s</p>""" % onto.Persona_Estilo_Verbal_Global_Fuerte.instances()
