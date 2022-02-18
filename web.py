@@ -6,8 +6,9 @@ Created on Sat Apr 10 13:04:27 2021
 @author: aly
 """
 from owlready2 import *
-from rdflib import *
+#from rdflib import *
 import json
+import rdflib
 from flask_cors import CORS
 
 # onto = get_ontology("estilosR.owl").load()  ontologia vieja
