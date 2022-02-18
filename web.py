@@ -65,7 +65,7 @@ def consulta():
           ?x :nivel ?w.  
        }""")))
 	
-	for x in range(0,len(d)):
+       for x in range(0,len(d)):
             st = str(d[x])
             st = st[1:-1]
             ruta.append(st)
