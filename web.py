@@ -50,9 +50,32 @@ def consulta():
   
   html = ""
   #sync_reasoner_hermit()
+    
   if consul == "1" :
        # html = """<p>>%s</p>""" % onto.Mat_Vis_Glo_M.instances()
-        html = """<p>>%s</p>""" % onto.Video.instances()
+       d = list(graph.query_owlready("""
+           PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+           PREFIX owl: <http://www.w3.org/2002/07/owl#>
+           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+           PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+           PREFIX  :<http://www.semanticweb.org/miguelangel/ontologies/2022/estilos#>
+           SELECT   ?x ?y ?z ?w
+	        WHERE { 
+	        	?x   :se_identifica_con_e_a  :visual_secuencial_apropiado.
+		        ?x :formato  ?y.  
+		        ?x :nivel ?w.  
+             }""")))
+         ruta = []
+         
+         for x in range(0,len(d)):
+            st = str(d[x])
+            st = st[1:-1]
+            ruta.append(st)
+         
+         archivo = json.dumps(ruta)
+         html = archivo
+            
+       # html = """<p>>%s</p>""" % onto.Video.instances()
   else:
      if consul == "2" :
         html = """<p>>%s</p>""" % onto.Persona_Estilo_Verbal_Global_Fuerte.instances()
