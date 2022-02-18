@@ -72,9 +72,8 @@ def consulta():
         }""")
         unique_category = []
         for row in qres:
-           category = ("%s" % row).split('/')[-3]
-           if category not in unique_category:
-              unique_category.append(category)
+           category = ("%s" % row)
+           unique_category.append(category)
         #archivo = json.dumps(unique_category)
         #html = archivo
 	
