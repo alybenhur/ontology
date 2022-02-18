@@ -14,6 +14,10 @@ from flask_cors import CORS
 onto = get_ontology("Estilos_de_Aprendizaje.owl").load()
 graph = default_world.as_rdflib_graph()
 
+g = rdflib.Graph()
+g.parse("Estilos_de_Aprendizaje.owl")
+
+
 from flask import Flask, request
 
 app = Flask(__name__)
@@ -26,7 +30,8 @@ def ontology_page():
     html += """<h3>Root classes</h3>"""
     for Class in Thing.subclasses():
         html += """<p>>%s</p>""" % Class.name
-    
+	html += """<p>>%s</p>""" % len(g)
+   
     
     html += """<div>
                 <p>Seleccione su consulta:</p>
