@@ -67,7 +67,7 @@ def consulta():
 	
        for x in range(0,len(d)):
             st = str(d[x])
-            st = st[1:-1]
+            #st = st[1:-1]
             ruta.append(st)
        archivo = json.dumps(ruta)
        html = archivo
