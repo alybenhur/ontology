@@ -69,7 +69,7 @@ def consulta():
           ?x :se_identifica_con_e_a  :visual_secuencial_apropiado.
           ?x :formato  ?y.  
           ?x :nivel ?w.  
-       }""")
+        }""")
 	
        #for x in range(0,len(d)):
         #    st = str(d[x])
