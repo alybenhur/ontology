@@ -30,7 +30,7 @@ def ontology_page():
     html += """<h3>Root classes</h3>"""
     for Class in Thing.subclasses():
         html += """<p>>%s</p>""" % Class.name
-	html += """<p>>%s</p>""" % len(g)
+        html += """<p>>%s</p>""" % len(g)
    
     
     html += """<div>
