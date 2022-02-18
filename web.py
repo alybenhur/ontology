@@ -56,7 +56,7 @@ def consulta():
        (list(graph.query_owlready("""
         PREFIX rdf-syntax: <http://www.w3.org/1999/02/22-rdf-syntax.ns#>
         PREFIX estilo: <http://www.semanticweb.org/root/ontologies/estilo#>
-       SELECT   ?x ?y ?z ?w WHERE { 
+        SELECT   ?x ?y ?z ?w WHERE { 
           ?x :se_identifica_con_e_a  :visual_secuencial_apropiado.
           ?x :formato  ?y.  
           ?x :nivel ?w.  
