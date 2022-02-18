@@ -75,8 +75,11 @@ def consulta():
         html = """<p>>%s</p>""" % onto.Persona_Estilo_Verbal_Global_Fuerte.instances()
      else:
          d = (list(graph.query_owlready("""
-                              PREFIX rdf-syntax: <http://www.w3.org/1999/02/22-rdf-syntax.ns#>
-                              PREFIX estilo: <http://www.semanticweb.org/root/ontologies/estilo#>
+                              PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                              PREFIX owl: <http://www.w3.org/2002/07/owl#>
+                              PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                              PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+                              PREFIX  :<http://www.semanticweb.org/miguelangel/ontologies/2022/estilos#>
                               SELECT distinct ?a WHERE {
                                   ?a estilo:se_relaciona_con estilo:verbal_secuencial_fuerte.
                                        }""")))
