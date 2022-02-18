@@ -69,9 +69,8 @@ def consulta():
             st = str(d[x])
             st = st[1:-1]
             ruta.append(st)
-
-        archivo = json.dumps(ruta)
-        html = archivo
+       archivo = json.dumps(ruta)
+       html = archivo
             
        # html = """<p>>%s</p>""" % onto.Video.instances()
   else:
