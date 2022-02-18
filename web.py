@@ -47,7 +47,7 @@ def ontology_page():
 @app.route('/result')
 def consulta():
   consul = request.args.get("c"," ")
-  
+  ruta = []
   html = ""
   #sync_reasoner_hermit()
     
@@ -64,7 +64,7 @@ def consulta():
 		        	?x :formato  ?y.  
 		       		?x :nivel ?w.  
                         	  }""")))
-         ruta = []
+         
          
          for x in range(0,len(d)):
             st = str(d[x])
@@ -85,7 +85,7 @@ def consulta():
                               SELECT distinct ?a WHERE {
                                   ?a estilo:se_relaciona_con estilo:verbal_secuencial_fuerte.
                                        }""")))
-         ruta = []
+         
          
          for x in range(0,len(d)):
             st = str(d[x])
