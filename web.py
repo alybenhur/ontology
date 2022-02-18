@@ -74,8 +74,8 @@ def consulta():
         for row in qres:
            category = ("%s" % row).rsplit('/',1)[-1]
            unique_category.append(category)
-        #archivo = json.dumps(unique_category)
-        #html = archivo
+        archivo = json.dumps(unique_category)
+        html = archivo
 	
        #for x in range(0,len(d)):
         #    st = str(d[x])
