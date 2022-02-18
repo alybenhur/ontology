@@ -76,7 +76,7 @@ def consulta():
             #st = st[1:-1]
          #   ruta.append(st)
        #archivo = json.dumps(d)
-       html = "hola"
+       #html = "hola"
             
        # html = """<p>>%s</p>""" % onto.Video.instances()
   else:
