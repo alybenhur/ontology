@@ -70,12 +70,11 @@ def consulta():
           ?x :formato  ?y.  
           ?x :nivel ?w.  
         }""")
-        html = """<p>>Hola</p>"""
-        #unique_category = []
-        #for row in qres:
-        #   category = ("%s" % row).split('/')[-4]
-        #   if category not in unique_category:
-        #      unique_category.append(category)
+        unique_category = []
+        for row in qres:
+           category = ("%s" % row).split('/')[-4]
+           if category not in unique_category:
+              unique_category.append(category)
         #archivo = json.dumps(unique_category)
         #html = archivo
 	
