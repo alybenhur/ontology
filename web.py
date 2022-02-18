@@ -70,6 +70,11 @@ def consulta():
           ?x :formato  ?y.  
           ?x :nivel ?w.  
         }""")
+	unique_category = []
+        for row in qres:
+           category = ("%s" % row).split('/')[-4]
+           if category not in unique_category:
+              unique_category.append(category)
 	
        #for x in range(0,len(d)):
         #    st = str(d[x])
