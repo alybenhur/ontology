@@ -78,14 +78,7 @@ def consulta():
         archivo = json.dumps(unique_category)
         html = archivo
 	
-       #for x in range(0,len(d)):
-        #    st = str(d[x])
-            #st = st[1:-1]
-         #   ruta.append(st)
-       #archivo = json.dumps(d)
-       #html = "hola"
-            
-       
+  
   else:
      if consul == "2" :
         html = """<p>>%s</p>""" % onto.Persona_Estilo_Verbal_Global_Fuerte.instances()
