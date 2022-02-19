@@ -73,7 +73,7 @@ def consulta():
         }""")
         unique_category = []
         for row in qres:
-           category = ("%s %s %s" % row).rsplit('/',2)[-1]
+           category = ("%s %s %s %s" % row).rsplit('/',2)[-1]
            unique_category.append(category)
         archivo = json.dumps(unique_category)
         html = archivo
