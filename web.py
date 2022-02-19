@@ -11,9 +11,9 @@ import json
 import rdflib
 from flask_cors import CORS
 
-# onto = get_ontology("estilosR.owl").load()  ontologia vieja
-#onto = get_ontology("Estilos_de_Aprendizaje.owl").load()
-#graph = default_world.as_rdflib_graph()
+onto = get_ontology("estilosR.owl").load()  ontologia vieja
+onto = get_ontology("Estilos_de_Aprendizaje.owl").load()
+graph = default_world.as_rdflib_graph()
 
 g = rdflib.Graph()
 g.parse("Estilos_de_Aprendizaje.owl")
