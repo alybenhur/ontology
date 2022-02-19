@@ -57,7 +57,7 @@ def consulta():
   html = ""
   #sync_reasoner_hermit()
     
-  if consul == "1" :
+  if consul == "2" :
        # html = """<p>>%s</p>""" % onto.Mat_Vis_Glo_M.instances()
         qres = g.query("""
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -76,7 +76,7 @@ def consulta():
         archivo = json.dumps(unique_category)
         html = archivo
 	
-  elif consul == "2" :
+  elif consul == "1" :
         qres = g.query("""
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -114,7 +114,7 @@ def consulta():
         archivo = json.dumps(unique_category)
         html = archivo
   
-  elif consul == "4" :
+  elif consul == "5" :
         qres = g.query("""
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -133,7 +133,7 @@ def consulta():
         archivo = json.dumps(unique_category)
         html = archivo
 	
-  elif consul == "5" :
+  elif consul == "4" :
         qres = g.query("""
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
