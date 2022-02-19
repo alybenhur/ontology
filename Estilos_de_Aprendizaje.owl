@@ -408,7 +408,7 @@
             </owl:Restriction>
         </rdf:type>
         <se_identifica_con_e_a rdf:resource="http://www.semanticweb.org/miguelangel/ontologies/2022/estilos#visual_secuencial_moderado"/>
-        <direccion_web rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.google.com</direccion_web>
+        <direccion_web rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://google.com</direccion_web>
         <formato>visual</formato>
         <navegacion>secuencial</navegacion>
         <nivel>moderado</nivel>
