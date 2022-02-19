@@ -65,15 +65,13 @@ def consulta():
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX  :<http://www.semanticweb.org/miguelangel/ontologies/2022/estilos#>
-        SELECT   ?x ?y ?w ?d WHERE { 
+        SELECT   ?x ?d WHERE { 
           ?x :se_identifica_con_e_a  :visual_secuencial_apropiado.
-          ?x :formato  ?y.  
-          ?x :nivel ?w.
-	  ?x :direccion_web ?d.
+          ?x :direccion_web ?d.
         }""")
         unique_category = []
         for row in qres:
-           category = ("%s %s %s %s" % row).rsplit('/',2)[-1]
+           category = ("%s %s" % row).rsplit('/',2)[-1]
            unique_category.append(category)
         archivo = json.dumps(unique_category)
         html = archivo
