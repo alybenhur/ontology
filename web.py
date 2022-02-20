@@ -171,6 +171,25 @@ def consulta():
         archivo = json.dumps(unique_category)
         html = archivo
 	
+  elif consul == "7" :
+        qres = g.query("""
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        PREFIX  :<http://www.semanticweb.org/miguelangel/ontologies/2022/estilos#>
+        SELECT   ?x ?d ?r WHERE { 
+          ?x :se_identifica_con_e_a  :verbal_secuencial_moderado.
+          ?x :direccion_web ?d.
+	  ?x :nivel ?r.
+        }""")
+        unique_category = []
+        for row in qres:
+           category = ("%s %s %s" % row).rsplit('/',2)[-1]
+           unique_category.append(category)
+        archivo = json.dumps(unique_category)
+        html = archivo
+	
   else:
          d = (list(graph.query_owlready("""
                               PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
